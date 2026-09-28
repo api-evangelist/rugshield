@@ -1,23 +1,68 @@
 aid: rugshield
+
 name: RugShield Solana Safety API
-description: 'RugShield Solana Safety API is a company surfaced via the API Evangelist harvest backlog
-  (source: new-submission) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'RugShield provides a parallel Solana risk advisory API for AI agents, offering token risk checks, transaction preflight, and aggregated independent advisor panels. It operates on a pay-per-call model using x402 USDC payments on Base or Solana, with no signup or API key required. The service is publicly documented, includes an OpenAPI spec, and supports free discovery of advisor pricing and capabilities.'
+
 url: https://raw.githubusercontent.com/api-evangelist/rugshield/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- Solana
+- Risk
+- API
+- Payments
+- AI
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/rugshield-hosts.yml
+- type: DomainSecurity
+  url: security/rugshield-domain-security.yml
 - type: Website
   url: https://rugshield-x402.fly.dev/
+- type: Documentation
+  url: https://rugshield-x402.fly.dev/docs
+- type: APIReference
+  url: https://rugshield-x402.fly.dev/openapi.json
+- type: Support
+  url: https://rugshield-x402.fly.dev/health
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-27'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://rugshield-x402.fly.dev/
+    status: 200
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

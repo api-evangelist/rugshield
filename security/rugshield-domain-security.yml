@@ -1,0 +1,15 @@
+generated: '2026-09-27'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: rugshield-x402.fly.dev
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 19 11:49:32 2026 GMT
+  hsts: null
+domains:
+- domain: fly.dev
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false
